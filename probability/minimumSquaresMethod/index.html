@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Умова</legend>
+                <label><input id='dimension' type="number" min="0" value="10">Кількість точок</label>
+                <input type="button" value="Сформувати форму" onclick="createForm()"><hr>
+                <table>
+                    <tbody>
+                        <tr id="x">
+                            <th>
+                                X<sub>i</sub>
+                            </th>
+                        </tr>
+                        <tr id="y">
+                            <th>
+                                Y<sub>i</sub>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <input type="button" onclick="calculaiting()" value="опрацювати дані">
+        </form>
+        
+        <div id="solve">
+        </div>
+        <script src="../../libraryMathDetails/universal.js"></script>
+        <script src="js.js"></script>
+    </body>
+</html>

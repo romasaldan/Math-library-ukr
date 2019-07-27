@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+		<script src="../../libraryMathDetails/universal.js"></script>
+        <link href="style.css" rel="stylesheet">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Задача на нормальний розподіл</h1>
+        <fieldset>
+            <legend>Ввести умови</legend>
+            <form>
+                <label><input  type="text" id='mx'><span>Математичне сподівання</span></label><br>
+                <label><input type="text" id='dx'> <span>Дисперсія</span></label><br>
+            </form>    
+        </fieldset><br>
+        <fieldset>
+            <legend>Знайти ймовірність</legend>
+            <form>
+                <label><input type='checkbox' id='checkerForInterval' checked><input type="text" placeholder="ввести a" id='a'>
+                    <input type="text" placeholder="ввести b" id="b"> <span>Попадання в проміжок (a,b)</span>
+                </label><br>
+                <label><input type="checkbox" id="checkedForSymmetryInterval"><input type="text" id='d' placeholder="Ввести d"><span>Знайти імовірність попадання в |X-MX| &#60;d </span><br>
+
+                </label>
+                <input type="button" onclick="breaker()" value="Обчислити імовірності">                
+            </form>    
+        </fieldset>
+        <h1>Розв'язки</h1>
+        <p class='none' description='interval'> Обчислимо імовірність попадання в проміжок</p>
+        <div id='probInterval' class="solve none"></div>
+
+        <p class="none" description='symmetryInterval'>Обчислимо відхилення від математичного сподівання</p>
+
+		<div id='symmetryInterval'></div>
+    	        <script src="js.js"></script>
+	</body>
+	
+</html>

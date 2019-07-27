@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    </head>
+    <body>
+        <h1>Гіпергеометричнй розподіл</h1>
+        <fieldset>
+<!--            <legend>Ввести дані</legend>-->
+            <form>
+                <input type="number" min="0" class="numb" id="favorable" placeholder="k1"><input type="text" id="favorableDescription" placeholder="Ввести тип шуканої величини"><span class='description'>Ввести інформацію</span><br>
+                <input type="number" id="unfavorable" class="numb" min="0" placeholder='k2'><hr>
+                <input type="number" placeholder="n" id="dimension" min='0'><span class='description'> Витягнули n елементів</span><hr>
+                <span>Відновити розподіл, а також</span><br>
+                <label><input type="checkbox" id="numberCharacreristik"><span class="description">Обчислити числові характеристики</span></label><br>
+                <label><input type="checkbox" id="checkDistributionFunction"><span class="description">Обчислити функцію розподілу</span></label><br>
+                <label><input type="checkbox" id="checkPolygonDistribution"><span class="description">Намалювати многоктник розподілу</span></label><br>
+                <label><input type="checkbox" id="grafDistributionFucntion"><span class="description" >Намалювати  графік функції розподілу</span></label><br>
+                <input type="button" onclick="launchingMachine()" value="Обробити дані">
+            </form>
+        </fieldset>
+        <h2>Розв'язки</h2>
+        <div class="solve">
+            <div id="renovate">
+                <p class="none" description='forRenovate'>Відновимо розподіл X. Де X<sub>k</sub> - кількість витягнутих<span element='favorableElement'></span></p>
+                <table class="none" id='polygon' border="2">
+                    <caption>Таблиця розподілу</caption>
+                    <tr id='values'>
+                        <th>X<sub>k</sub></th>
+                    </tr>
+                    <tr id='probabilities'>
+                        <th>p<sub>k</sub></th>
+                    </tr>
+                    <p class="none" description='afterTable'>Обчислимо ймовірності і заповнимо таблицю розподілу</p>
+                </table>
+            </div>
+            <div id='computingNumbersCharacteristic'>
+                <p class='none' description='computingMx'>Обчислимо математичне сподівання і дисперсію випадкової величини X</p>
+            </div>
+            <p description='grafPolygonFunction' style="display:none">На основі таблиці побудуємо многокутник розподілу</p>
+            <div class='space' style='display:none' id='polygonDistribution'>
+                <div class='axesX'></div>
+                <div class='axesY'></div>
+            </div>
+            <p id='explainingForEmpireFunction' style='display:none'>Емпірична функція розподілу матиме вигляд</p>
+            <div id='empFun'></div>
+            <p description='grafEmpireFunction' style="display: none">Побудуємо графік функції розподілу</p>
+            <div class='space' id='grafEmpireFunction' style='display:none'>
+                <div class='axesX'></div>
+                <div class='axesY'></div>
+            </div>            
+        </div>
+        <script src="js.js"></script>
+    </body>
+</html>

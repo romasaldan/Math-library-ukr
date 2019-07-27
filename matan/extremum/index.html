@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Задача на екстремум функції двох змінних</h1>
+        <fieldset>
+            <form>
+                <span><input type="text" name="x2" value="1">x<sup>2</sup>+<input type='text' value="-1" name="xy">xy+<input name="y2" value="1" type="text">y<sup>2</sup>+<input type="text" name="x" value="0">x+<input type="text" name="y" value="1">y+<input type="text" name="a" value="3">=0
+                </span>
+                <input type="button" value="Опрацювати дані" onclick="calculate()">
+            </form>
+        </fieldset>
+        <div class="solve">
+            <div id='condition' class='condition'></div>
+            <div id='partial'></div>
+            <div id='systemEquation'></div>
+            <div id='enoughCondition'></div>
+            <div id='conclusion'></div>
+        </div>
+        <script src="../universal.js"></script>
+        <script src="js.js"></script>
+    </body>
+</html>

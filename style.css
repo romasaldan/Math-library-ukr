@@ -1,0 +1,98 @@
+#body {
+        font-family: cursive;
+    display: flex;
+    flex-direction:column;
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+    border: 1px solid gray;
+    background-color: #ffd79f
+}
+header {
+    display: flex;
+    border: 1px solid gray;
+    flex-direction:column;
+    flex-grow: 1;
+}
+.subheader {
+    border: 1px solid gray;
+    display: flex;
+    flex-direction:row;
+    flex-grow: 1;
+}
+#menu {
+    flex-grow: 3;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction:row;
+}
+#name {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-grow: 1;
+}
+#logo {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row-reverse;
+}
+header p {
+    width: 100%;
+}
+.subheader p {
+    width: 100%;
+    text-align: center;
+}
+.inscription  {
+    display: flex;
+    flex-grow: 1;
+    margin: auto;
+}
+.discipline {
+    display: flex;
+    flex-grow: 1;
+    background-color: #ff7f2f;
+    border-radius: 20px;
+    transition-duration: 1.3s;
+}
+.discipline p {
+    text-align: center;
+    margin: 0px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+}
+.discipline a {
+    display: block;
+    text-decoration: none;
+    margin: auto;
+    color: #36332e;
+    width: 100%;
+    height: 100;
+}
+
+.discipline:hover {
+   background: linear-gradient(to left,#e0a113,#ff924d);
+    transform: scale(1.05)
+}
+.submenu {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: 1px solid gray;
+}
+.typeProblem {
+    display: flex;
+    flex-grow: 1;
+
+}
+.typeProblem:hover {
+    
+}
+.clear {
+	 width: 100%;
+	 height:1px;
+	 background-color:white;
+}

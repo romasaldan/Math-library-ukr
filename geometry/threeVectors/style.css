@@ -1,0 +1,13 @@
+label input {
+    width: 40px;
+}
+fieldset {
+    width: 800px;
+    background-color:darkseagreen;
+}
+legend {
+    color:deeppink;
+}
+.none {
+    display: none;
+}

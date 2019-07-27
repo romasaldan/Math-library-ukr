@@ -1,0 +1,14 @@
+fieldset {
+    width: 700px;
+}
+.none {
+    display: none;
+}
+.solve  {
+    width: 800px;
+}
+/*
+div.solve img {
+    min-width: 900px;
+    max-width: 800px;
+}*/

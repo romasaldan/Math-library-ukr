@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    </head>
+    <body>
+    <h1>Задача на дискретний розподіл</h1>
+        <p>Введіть кількість елементів у розподілі</p>
+        <form>
+            <input name='dimension' id='dimension' type="range"  min="1" max='10' step="1" onchange="createObject()"><span id='describeDimension'></span> <br>
+        </form>
+        <hr>
+        <p>Введіть значення та імовірності</p>
+        <form>
+            <table border="2">
+                <tr id='value' class="value">    
+                </tr>
+                <tr id="probability" onchange="checkProbability()">
+                </tr>
+            </table>
+            <span id='sumOfProb'></span><br>
+            <label><input type="checkbox" id='empireFunction' checked>Обчислити емпіричну функцію розподілу</label><br>
+            <label><input type="checkbox" checked id='paintEmp'>Намалювати графік функції розподілу</label><br>
+            <label><input type="checkbox" id='paintDistribution' checked>Намалювати графік щільності розподілу</label><br>
+            <label><input type="checkbox" id='calculateProb' name='calculateProb'>
+            <input type="text" id="valueCondition">Запишіть імовірності, що треба обчислити</label><br>
+            <input type="button" value="Вирахувати" onclick="calculate()">
+        </form>
+        <div id="solve">
+            <p>Обчислимо математичне сподівання</p>
+            <div id="mx"></div>
+            <p>Обчислимо другий центральний момент</p>
+            <div id='mx2'></div>
+            <p>Обчислимо дисперсію</p>
+            <div id='dx'></div>
+            <p>Обчислимо емпіричну функцію розподілу</p>
+            <div id='empFun'></div>
+            <p>Функція розподілу</p>
+            <div id='grafEmpire' class='coordinateAxes'>
+                <div class="axesX"></div>
+                <div class="axesY"></div>
+            </div>
+            <p>Многокутнк розподілу</p>
+            <div id='grafDistribution' class='coordinateAxes'>
+                <div class="axesX"></div>
+                <div class="axesY"></div>            
+            </div>
+            <p>Обчислимо шукані імовірності</p>
+            <div id='resultForProbability'></div>
+        </div>
+        <script src="js.js"></script>
+    </body>
+</html>

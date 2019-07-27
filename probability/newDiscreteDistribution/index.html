@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="../../statistic/trustIntervals/style.css">
+        <link rel="stylesheet" href="style.css">	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="../../libraryMathDetails/intervalsLibrary.js"></script>
+		<script src="../../libraryMathDetails/fractionLibrary.js"></script>
+		<script src="../../libraryMathDetails/universal.js"></script>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script> <!-- for graf -->	
+		
+	</head>
+	<body>
+        <form id="getData">
+            <div class='tasc'>
+				Ввести розмірність дискретного розподілу<input type='number' name="dimension"><div class="clear"></div>
+				<input type="button" value="Сформвати таблицю і задачі" onclick="createTable()">
+				<div id="table"></div>
+				<div class="none" id="listOfTasc">
+					<label><input type="checkbox" name='discrete' checked>Таблиця дискретного розподілу</label><div class="clear"></div>
+					<label><input type="checkbox" name='unknownParametr'>Знайти невідомий параметр</label><div class="clear"></div>
+					<label><input type="checkbox" name="numberChar" checked>Обчислити числові характеристики</label><div class="clear"></div>
+<!--
+					<label>Ввести рівень значимості<input type="text" name="levelConfidence"></label><div class="clear"></div>
+					<label><input type="checkbox" name="trustAverageKD">Обчислити довірчий інтервал для матсподівання при відомій дисперсії<input type="text" name='deviation'></label><div class="clear"></div>
+					<label><input type="checkbox" name="trustAverageUKD">Обчислити довірчий інтервал для матсподівання при невідомому СКВ </label><div class="clear"></div>
+					<label><input type="checkbox" name="trustDisp">Обчислити довірчий інтервал для дисперсії і СКВ</label><div class="clear"></div>
+-->
+					<label><input type="checkbox" name="empireFunction">Функція розподілу</label><div class="clear"></div>		
+					<label><input type="checkbox" name="grafEmpireFunction">Графік функції розподілу</label><div class="clear"></div>		
+<!--					<label><input type="checkbox" name="grafRelativePolygon">Розподіл відносних частот</label><div class="clear"></div>		-->
+					<label><input type="checkbox" name='grafPolygon'>Розподіл частот</label><div class="clear"></div>
+					<label><input type="checkbox" name='probInterval'>Перевірити, чи функція належить проміжку 
+						<select name='leftInclude'>
+							<option value="[">[</option>
+							<option value="(">(</option>
+						</select>
+						<input type="text" class="smallForm" name="leftLimit">;
+						<input type="text" class="smallForm" name="rightLimit">
+						<select name='rightInclude'>
+							<option value="]">]</option>
+							<option value=")">)</option>
+						</select>
+					</label><div class="clear"></div>
+					
+<!--					<label><input type="checkbox" name="toIntervalDistribution">Перейти до інтервального розподілу з </label><input type="number" name="numberInterval"> інтервалів<div class="clear"></div>-->
+<!--					<label><input type="checkbox" name="histogramma">Побудувати гістограму частот</label><div class="clear"></div>-->
+					
+				</div>
+            </div>
+			
+        </form>
+        <input type="button" value="розв'язати задачі" onclick="start('#solvers')">
+		<div id="solvers"></div>		
+		
+		<script src="../../libraryMathDetails/discreteDistributionLibrary.js"></script>
+		<script src="js.js"></script>
+	</body>
+</html>	

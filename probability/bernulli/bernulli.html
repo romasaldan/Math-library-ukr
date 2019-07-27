@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Біноміальний розподіл</h1>
+        <fieldset>
+            <legend>Ввести умову задачі</legend>
+            <form>
+                <label>
+                    <input type="number" min="3" max="10" step="1" id="dimension">
+                    <span>Кількість випробувань</span>
+                </label><br>
+                <label>
+                    <input type="text" id='probability' placeholder="Введіть імовірність події">
+                    <span>Імовірність успіху</span>
+                </label>
+            </form>    
+        </fieldset>
+        <fieldset>
+            <form>
+            <legend>Що потрібно знайти?</legend>
+            <label><input id='firstTask' type="checkbox" checked><span>Відтворити розподіл</span></label><br>
+            <label><input type="checkbox" checked id='functionDensityOfProbability'><span>Функція щільності розподілу</span></label><br>    
+            <label><input type="checkbox" checked id='numberCharacteristic'><span>Обчислити числові характеристики</span><br> </label>    
+            <label><input type="checkbox"  id="showPolygonOfDistribution"><span>Графік щільності розподілу</span></label><br>
+            <label><input type="checkbox"  id='switchForEmpireFunction'><span>Функція розподілу</span></label><br>
+            <label><input type="checkbox"  id="imageOfFunctionEmpire"><span>Графік функції розподілу</span></label><br>
+            <label><input type="checkbox" id='OnProb'><span>Обчислити імовірність</span><input type="text" id='valueCondition'></label><br>
+            <input type="button" value="Розв'язати" onclick="breaker()">    
+            </form>    
+        </fieldset> 
+        <div class="solve">
+            <p id='descriptionOfRenovating' style="display:none">Відновимо розподіл за допомогою формули Бернуллі, так як всі події незалежні і рівноймовірні</p>
+            <div id='renovateDistribution'></div>
+            <p id='explainingOfTableRenovaiting' style="display:none">Щільність розподілу матиме вигляд</p>
+            <table border="2" style="display:none" id='tableOfProbabilities'>
+                <tr id='value'>
+                    <th>X<sub>k</sub></th>
+                </tr>
+                <tr id='probabilities'>
+                    <th>p<sub>k</sub></th>
+                </tr>
+            </table>
+            <p description='grafPolygonFunction' style="display:none">На основі таблиці побудуємо многокутник розподілу</p>
+            <div class='space' style='display:none' id='polygonDistribution'>
+                <div class='axesX'></div>
+                <div class='axesY'></div>
+            </div>
+            <p id='explainingForEmpireFunction' style='display:none'>Емпірична функція розподілу матиме вигляд</p>
+            <div id='empFun'></div>
+            <p description='grafEmpireFunction' style="display: none">Побудуємо графік функції розподілу</p>
+            <div class='space' id='grafEmpireFunction' style='display:none'>
+                <div class='axesX'></div>
+                <div class='axesY'></div>
+            </div>
+            <p id='explainingForExpectedValue' style="display:none">Обчислимо основні числові характеристики. Врахуємо, що це біноміальний розподіл, отже ми можемо використати вже готові формули</p>
+            <div id='computingNumbersCharacteristic'></div>
+            <p description='searchProbability' style="display:none">Обчислимо шукану імовірність</p>
+            <div style="display:none" id='processOfSearchingProbability'></div>
+            
+        </div>
+        
+        <script src="js.js"></script>
+    </body>
+</html>

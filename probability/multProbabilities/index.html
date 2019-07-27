@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Теорема множення імовірностей</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>ввести дані задачі</h1>
+        <fieldset>
+            <form>
+                <input type="number" min="2" max="4" value="3" id='dimension'><span>Кількість елементів</span><br>
+                <input type="text" id='text' placeholder="Ввести текст"><span>Ймовірність чого шукаємо(для кращого оформлення розв'язку)</span><br>
+                <input type="button" value="ввести дані" onclick="createForm()">
+                
+            </form>
+            <form class="none">
+                <table border="2">
+                    <tr attr='nameOfCondition'>
+                    </tr>
+                    <tr attr='valueOfCondition'>
+                    </tr>
+                </table><hr>
+                <p>Відновити розподіл та</p>
+                <label><input type="checkbox" id="probabilityValue"><span class="description">Обчислити імовірність</span><input type="text" id="valueCondition" placeholder="Ввести рівність"></label><br>
+                <label><input type="checkbox" id='numberCharacteristic'><span class="description">Числові характеристики</span></label><br>
+                <label><input type="checkbox" id="imageOfFunctionEmpire"><span class="description">Функція розподілу</span></label><br>
+                <label><input type="checkbox" id='switchForEmpireFunction'><span class="description">Намалювати функцію розподілу.</label><br>
+                <label><input type="checkbox" id="showPolygonOfDistribution"><span class="description">Намалювати полігон розподілу</label><br>
+                <input type="button" value="Опрацювати дані" onclick="launching()">
+            </form>    
+        </fieldset>
+        <h2>Розв'язки</h2>
+        <div class="solve">
+            <div id='renovatedDistribution'>
+                <p class="none" description='aboutX'> X-кількість<span atrr='text'></span></p>
+                <p class='none' description='forRenovaiting'>Відновимо розподіл, враховуючи, що всі три події незалежні між собою. Обчисливши імовірності заповнимо таблицю</p>
+                <table class="none" id='tableDistribution' border="2">
+                    <tr id='values'>
+                        <th>X<sub>k</sub></th>
+                    </tr>
+                    <tr id='probabilities'>
+                        <th>p<sub>k</sub></th>
+                    </tr>
+                </table>
+            </div>
+            <div id='computingNumbersCharacteristic'>
+                <p description='computingMx' class="none">Обчислимо  числові характеристики</p>
+            </div>
+            <p description='grafPolygonFunction' style="display:none">На основі таблиці побудуємо многокутник розподілу</p>
+            <div class='space' style='display:none' id='polygonDistribution'>
+                <div class='axesX'></div>
+                <div class='axesY'></div>
+            </div>
+            <p id='explainingForEmpireFunction' style='display:none'>Емпірична функція розподілу матиме вигляд</p>
+            <div id='empFun'></div>
+            <p description='grafEmpireFunction' style="display: none">Побудуємо графік функції розподілу</p>
+            <div class='space' id='grafEmpireFunction' style='display:none'>
+                <div class='axesX'></div>
+                <div class='axesY'></div>
+            </div>
+            <div id='processOfSearchingProbability'>
+                <p class="none" description='prob'>Обчислимо шукану імовірність</p>
+            </div>
+        </div>
+        <script src="js.js"></script>
+    </body>
+</html>

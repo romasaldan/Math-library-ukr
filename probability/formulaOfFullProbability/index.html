@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <link href='style.css' rel='stylesheet' type='text/css'>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+		<script src="../../libraryMathDetails/fractionLibrary.js"></script>
+		<script src="../../libraryMathDetails/universal.js"></script>            
+
+    </head>
+    <body>
+        <h1>Формула повної імовірності</h1>
+        <h2>ввести дані задачі</h2>
+        <fieldset>
+                <form>
+                    <input type="number" min="2" max="4" value="3" id='dimension'><span>Кількість елементів</span><br>
+                    <input type="text" id='eventa' placeholder="Ввести текст"><span>Назва події А</span><br>
+                    <input type="button" value="ввести дані" onclick="createForm()">
+
+                </form>
+                <form class="none">
+                    <table border="2">
+                        <tr attr='nameOfCondition'></tr>
+                        <tr attr='probability'></tr>
+                        <tr attr='conditionProbability'></tr>
+                        <tr attr='descriptingEvent'></tr>
+                        <tr attr='posteriorProbability'></tr>
+                    </table><hr>
+                    <div id='start'>
+                        <input type="button" onclick="start()" value="почали">
+                    </div>    
+                </form>    
+        </fieldset>
+        <div id='solve'>
+        </div>
+        <script src="js.js"></script>
+    </body>      
+</html>

@@ -1,0 +1,18 @@
+fieldset {
+    width: 700px;
+    background-color: aliceblue;
+    border-color: #31f731;
+}
+.none {
+    display: none;
+}
+
+.or {
+    width: 100%;
+}
+.line {
+    color: #31f731;
+}
+#solve {
+    padding: 50px;
+}

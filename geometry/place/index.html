@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Рівняння прямої</h1>
+        <h2>Ввести координати трикутника</h2>
+        <fieldset>
+            <form>
+                <div class="point">
+                    <input type="text" class='namePoint' id="aMark" value="A">=( <input type="text" id="ax" placeholder="x" value="3">;<input type="text" id="ay" placeholder="y" value="2">)
+                </div>
+                <div class="point">
+                    <input id="bMark" class='namePoint' type="text" value='B'>=( <input type="text" id="bx" value="1" placeholder="x">;<input type="text" value="0" id="by" placeholder="y">)
+                </div>
+                <div class="point">
+                    <input value="C" type="text" id="cMark" class='namePoint' >=( <input type="text" id="cx" value="0" placeholder="x">;<input type="text" value="-2" id="cy" placeholder="y">)
+                </div>
+            </form>
+            <input type="button" value="Обрати задачі" onclick='createProblemForm()'>
+        </fieldset>
+        <fieldset class="none" id='problem' >
+            <form>
+                <span id='length'>Обчислити довжину сторони:</span>
+                <label><input type="checkbox"> <span id="AB"></span></label>
+                <label><input type="checkbox"> <span id="AC"></span></label>
+                <label><input type="checkbox"> <span  id='BC'></span></label><br>                <span>Обчислити рівняння сторін:</span>
+                <label><input type="checkbox"> <span id="eAB"></span></label>
+                <label><input type="checkbox"> <span id="eAC"></span></label>
+                <label><input type="checkbox"> <span  id='eBC'></span></label><br> <span>Обчислити величину кута при вершині:</span>
+                <label><input type="checkbox"> <span id="angleA"></span></label>
+                <label><input type="checkbox"> <span id="angleB"></span></label>
+                <label><input type="checkbox"> <span  id='angleC'></span></label><br>
+                <span>Написати рівняння медіани з точки:</span>
+                <label><input type="checkbox"> <span id="mA"></span></label>
+                <label><input type="checkbox"> <span id="mB"></span></label>
+                <label><input type="checkbox"> <span  id='mC'></span></label><br> 
+                <span>Довжина медіани з точки:</span>
+                <label><input type="checkbox"> <span id="lmA"></span></label>
+                <label><input type="checkbox"> <span id="lmB"></span></label>
+                <label><input type="checkbox"> <span  id='lmC'></span></label><br>
+                <span>Написати рівняння висоти з точки:</span>
+                <label><input type="checkbox"> <span id="hA"></span></label>
+                <label><input type="checkbox"> <span id="hB"></span></label>
+                <label><input type="checkbox"> <span  id='hC'></span></label><br>    
+                <span>Довжина висоти з точки</span>
+                <label><input type="checkbox"> <span id="lhA"></span></label>
+                <label><input type="checkbox"> <span id="lhB"></span></label>
+                <label><input type="checkbox"> <span  id='lhC'></span></label><br>
+                <label>Площа <span id="abc"></span> <input type="checkbox"> </label><br>
+                <input type="button" value="Обчислити" onclick="calculate()">    
+            </form>
+        </fieldset>
+        <h2>Розв'язки</h2>
+        <div class="solve">
+            <div id="length2">                
+            </div>
+            <div id="EAB">
+            </div>
+            <div id="hAB">
+            </div>
+            <div id='mediana'>
+            </div>
+            <div id='angle'></div>
+            <div id='lengthOfHeight'>
+            <div id='place'>
+            </div>
+        </div>
+<!--
+            <div class='space' style='display:none' id='polygonDistribution'>
+                <div class='axesX'></div>
+                <div class='axesY'></div>
+            </div>
+            <div class='space' id='grafEmpireFunction' style='display:none'>
+                <div class='axesX'></div>
+                <div class='axesY'></div>
+            </div>
+-->
+        
+        <script src="../universal.js"></script>
+        <script src="js.js"></script>
+    </body>
+</html>

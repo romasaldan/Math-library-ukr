@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" async src="path-to-mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    </head>
+    <body>
+        <fieldset>
+            <form>
+                <label>Розмірність по вертикалі X<input type="number" min="2"></label><br>
+                <label>Розмірність по горизонталі Y <input type="number" min="2"></label><br>
+                <input type="button" value="Створити форму імовірностей" onclick="createTableInput()"> 
+            </form><br>
+            <form>
+                <table border="2">
+                    <tbody id='data'>
+                    </tbody>
+                </table><hr>
+                <div style="display:none" id='button'>
+                    <label><input type="checkbox">Обчислити значення параметра а</label><br>
+                    <label><input type="checkbox">Обчислити коефіцієнт кореляції</label><br>
+                    <input type="button" value="Обробити дані" onclick="createDistribution() ">
+                </div>
+            </form>
+        </fieldset>
+        <div id=solve>
+            <div id="distribution">
+                <div id='searchSum'>
+                </div>
+                <table>
+                    <tbody id="distr">
+                    </tbody>
+                </table>
+            </div>
+            <div id='components'>
+                <div id="componentX">
+                    
+                </div>
+                <div id="componentY">
+          
+                </div>
+                <div id="numberCharacteristicX">
+                </div>
+                <div id="numberCharacteristicY">
+                </div>
+                <div id="MXY"></div>
+                <div id='condition'>
+                    
+                </div>
+            </div>
+        </div>
+
+        <script src="../universal.js"></script>
+        <script src="js.js"></script>
+    </body>
+</html>

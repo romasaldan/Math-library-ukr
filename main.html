@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="body">
+            <header>
+                <div class="subheader">
+                    <div id='name'><p>Онлайн калькулятори</p></div>
+                    <div id="logo"><img src="unnamed.png" width="200" height="200" alt="logo"></div>
+                </div>
+                <div class="subheader">
+                    <div class="inscription"><p>дисципліни</p></div>
+                    <div class="inscription"><p>назви задач</p></div>
+                </div>
+            </header>
+            <div id='menu'>
+                <div class="submenu" style="width:40%">
+                    <div class="discipline" onclick="showTypeProblemMatan()">
+                        <p>Математичний аналіз</p>
+                    </div>
+                    <div class="discipline" onclick="showTypeProblemProbability() ">
+                        <p>Теорія імовірності</p>
+                    </div>
+                    <div class="discipline" onclick="showTypeProblemAlgebra()">
+                        <p>Алгебра</p>
+                    </div>
+                    <div class="discipline" onclick="showTypeProblemGeometry()">
+                        <p>Геометрія</p>
+                    </div>
+                    <div class="discipline" onclick="showTypeProblemTfkz()">
+                        <p>Математична Статистика</p>
+                    </div>
+                </div>
+                <div class="submenu" id="matan" style="display:none;">
+                    <div class="discipline">
+                        <a href='matan/extremum/index.html'>
+                            <p>Екстремум двох змінних</p>
+                        </a>
+                    </div>
+
+                </div> 
+                <div class="submenu" id="tfkz" style="display:none;">
+                    <div class="discipline">
+                        <a href='statistic/equalityOfTwoDispersion/equalityOfTwoDispersion.html'>
+                            <p>Рівність двох дисперсій</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='statistic/equalityOfTwoExpectedValue/index.html'>
+                            <p>Рівність двох математичних сподівань</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='statistic/equalityOfTwoExpectedValueUnknownDisp/index.html'>
+                            <p>Рівність двох математичних сподівань при невідомій дисперсії</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='statistic/equationOfLinearRegression(table)/tableRegression.html'>
+                            <p>Рівняння лінійної регресії для таблиці</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='statistic/hiSquare/hiSquareNormalDistribution.html'>
+                            <p>Критерій Пірсона</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='statistic/intervalDistribution/index.html'>
+                            <p>інтервальний розподіл</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='statistic/statistical%2520hypotheses%2520average/averageHypotheses.html'>
+                            <p>Гіпотеза про значення математичного сподівання</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='statistic/statistical%2520hypotheses%2520Disp/index.html'>
+                            <p>Гіпотеза про значення дисперсії</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='statistic/statisticalDistribution/index.html'>
+                            <p>Статистичний розподіл</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='statistic/trustIntervals/trust.html'>
+                            <p>Довірчі інтервали</p>
+                        </a>
+                    </div>
+
+                </div>    
+                <div class="submenu" id="algebra" style="display:none;">
+					<div class="discipline">
+                        <a href='algebra/determinant3Dimensional/determinant.html'>
+                            <p>Визначник третього порядку</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='algebra/determinant4Dimensional/determinant.html'>
+                            <p>Визначник четвертого порядку</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='algebra/inverseMatrix/inverse.html'>
+                            <p>Обернена матриця</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='algebra/methodOfInverseMatrix/methodOfInverseMatrix.html'>
+                            <p>Матричний метод</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='algebra/methodOfKramer/kramer.html'>
+                            <p>Метод Крамера</p>
+                        </a>
+                    </div>
+                </div> 
+                <div class="submenu" id="geometry">
+                    <div class="discipline">
+                        <a href='geometry/threeVectors/threeVectors.html'>
+                            <p>Три тривимірних вектора</p>
+                        </a>
+                    </div>  
+                    <div class="discipline">
+                        <a href='geometry/place/index.html'>
+                            <p>На площині</p>
+                        </a>
+                    </div>
+                </div> 
+                <div class="submenu" style="display:none" id="probability">
+                    <div class="discipline">
+                        <a href='probability/formulOfBernulli/index.html'>
+                            <p>Формула Бернуллі</p>
+                        </a>
+                    </div>                     
+                    <div class="discipline">
+                        <a href='probability/bernulli/bernulli.html'>
+                            <p>Розподіл  Бернуллі</p>
+                        </a>
+                    </div>                  
+                    <div class="discipline">
+                        <a href='probability/combination/index.html'>
+                            <p>Комбінашки</p>
+                        </a>
+                    </div> 
+                    <div class="discipline">
+                        <a href='probability/puasson/poisson.html'>
+                            <p>Пуассон</p>
+                        </a>
+                    </div> 
+                    <div class="discipline">
+                        <a href='probability/distribution%20gypergeom/'>
+                            <p>Гіпергеометричний розподіл</p>
+                        </a>
+                    </div>          
+                    <div class="discipline">
+                        <a href='probability/newDiscreteDistribution/index.html'>
+                            <p>Дискретний розподіл</p>
+                        </a>
+                    </div>        
+                    <div class="discipline">
+                        <a href='probability/multProbabilities/index.html'>
+                            <p>Формула множення імовірностей</p>
+                        </a>
+                    </div>
+                    <div class="discipline">
+                        <a href='probability/laplas/index.html'>
+                            <p>Формула Лапласа</p>
+                        </a>
+                    </div>  
+                    <div class="discipline">
+                        <a href='probability/normalDistribution/norm.html'>
+                            <p>Нормальний розподіл</p>
+                        </a>
+                    </div>                    
+                    <div class="discipline">
+                        <a href='probability/twoDimension/discrete.html'>
+                            <p>Двовимірний розподіл</p>
+                        </a>
+                    </div>
+                    <div class="discipline">
+                        <a href='probability/formulaOfFullProbability/index.html'>
+                            <p>Формула повної імовірності</p>
+                        </a>
+                    </div>
+					<div class="discipline">
+                        <a href='probability/limitedGeomDistribution/limitedGeomDistribution.html'>
+                            <p>Обрубаний геометричний розподіл</p>
+                        </a>
+                    </div>
+                    <div class="discipline">
+                        <a href='probability/statistic/index.html'>
+                            <p>Статистична хирня</p>
+                        </a>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <script src="libraryMathDetails/universal.js"></script>
+        <script src="js.js"></script>
+    </body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Два вектора</title>
+        <link href="style.css" rel="stylesheet">
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    </head>
+    <body>
+        <h1>Коли є три вектора</h1>
+        <fieldset>
+            <legend>Ввести дані</legend>
+            <form>
+                <label>
+                    <p>Ввести координати вектора </p>
+                    a=(<input type="text" id='ax' placeholder="x">,
+                    <input type="text" id='ay' placeholder="y">,
+                    <input type="text"id='az' placeholder="z">)
+                </label>    
+                <label>
+                    <p>Ввести координати вектора </p>
+                    b=(<input type="text" id='bx' placeholder="x">,
+                    <input type="text" id='by' placeholder="y">,
+                    <input type="text" id='bz' placeholder="z">
+                </label>
+                <label>
+                    <p>Ввести координати вектора </p>
+                    с=(<input type="text"id='cx' placeholder="x">,
+                    <input type="text" id='cy' placeholder="y">,
+                    <input type="text" id='cz' placeholder="z">
+                </label>
+                <hr>
+                <label>
+                    <input type="checkbox" id='lengthVector'> <span>Знайти довжину вектора <input type="checkbox" class="length"><span style='color:darkOrange'>a</span><input type="checkbox" class="length"><span style="color:orange">b</span>
+                    <input type="checkbox" class="length"><span style="color:red">c</span></span><br></label>
+                <label>
+                    <input type="checkbox" id='scalProduct'> <span>Знайти скалярний добуток a i b</span>
+                    <br>
+                </label>
+                <label>
+                    <input type="checkbox" id='vectorProduct'> <span>Знайти векторний добуток a i b</span>                     
+                    <br></label>
+                <label>
+                    <input type="checkbox" id='mixProduct'> <span>Знайти мішаний добуток</span><br></label>
+                
+                <label>
+                    <input type="checkbox" id='checkAngle'> <span>Знайти кут між векторами(а також скалярний добуток і їх модулі)</span>
+                    <br></label>
+                <label>
+                    <input type="checkbox" id='extentCube'> <span>Знайти обєм куба(а також мішаний добток)</span>      
+                <br></label>
+                <label>
+                    <input type="checkbox" id='extentPiramida'> <span>Знайти обєм піраміди побудованої на векторах(а також мішаний добуток)</span>                
+                <br></label>
+                <label>
+                    <input type="checkbox" id='complan'> <span>Перевірити компланарність векторів(а також мішаний добуток)</span>
+                <br></label>
+                <label>
+                    <input type="checkbox" id='placeQuadrangle'> <span>Знайти площу паралелограма (а також векторний добуток)</span><br>
+                </label>
+                <label>
+                    <input type="checkbox" id="placeTriangle"> <span>Знайти площу трикутника(а також векторний добуток)</span><br></label>
+                <label>
+                    <input type="checkbox" id="checkParallel"> <span>Перевірити колінеарність</span>                       
+                    <br></label>
+                <label>
+                    <input type="checkbox" id="checkOrtogon"> <span>Перевірити ортогональність (а також скалярний добуток)</span>                     
+                    <br></label>
+                <input type="button" value="Обробити дані" onclick='processingData()'>
+            </form>            
+        </fieldset>
+        <h1>Розв'язки</h1>
+        <div class='solve'>
+            <div id="modulOfVectors">
+                <p class="none" description='lengthVector'>Обчислимо довжину вектора</p>
+                
+            </div>
+            
+            <div id="solveScalProduct">
+                <p class="none" description='scalProduct'>Обчислимо скалярний добуток</p>
+            </div>
+            <div id="solveVectorProduct">
+                <p class='none' description='vectorProduct'>Обчислимо векторний добуток </p>
+            </div>
+            <div id="solveMixProduct">
+                <p class='none' description='mixProduct'>Обчислимо мішаний добуток </p>            
+            </div>
+            <div id="angle">
+                <p description='angle' class="none">Обчислимо величину кута між векторами a i b</p>
+            </div>
+            <div id="solveExtendCube">
+                <p class="none" description='extendCube'>Обчислимо об'єм куба побудованого на векторах a,b,c</p>
+            </div>
+            <div id="solveExtentPiramida">
+                <p class="none" description='extendPiramida'>Обчислимо об'єм куба побудованого на векторах a,b,c</p>
+            </div>
+            <div id='checkComplan'>
+                <span class="none" description='checkComplan'>На основі обчисленого мішаного добутку, ми можемо зробити висновок, що </span><span id='conclusion'></span>
+            </div>
+            <div id="placeRectangle">
+                <p class="none" description='placeQuadrangle'>Для того щоб обчислити площу паралелограма, нам потріно обчислити векторний  добуток векторів a,b</p>
+            </div>
+            <div id="showPlaceTriangle">
+                <p class="none" description='placeTriangle'>Для того щоб обчислити площу трикутника, нам потріно обчислити векторний  добуток векторів a,b</p>
+            </div>            
+            <div id="parallel">
+                <p class="none" desciption='showVectorA'></p>
+                <p class="none" desciption='showVectorB'></p>
+                <p class="none" description='parallel'>Перевіримо колінеарність векторів. Для двох векторів повинна виконатися рівність</p>
+                <div class="none" description='parallel2'>
+                    <p lang="latex"> 
+                        \frac{a_x}{b_x}=\frac{a_y}{b_y}=\frac{a_z}{b_z}  
+                    </p>
+                </div>
+                <p class="none" id='conclusionParallel'></p>
+            </div>
+            <div id="ortogon">
+                <p class="none" id='lastTask'>Обчислимо скалярний добуток</p>
+                <p class="none" description='concl'></p>
+            </div>
+        </div>
+        <script src="js.js"></script>
+    </body>
+</html>

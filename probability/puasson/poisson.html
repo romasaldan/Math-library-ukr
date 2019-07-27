@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Розподіл Пуассона</h1>
+        <fieldset>
+            <legend>Ввести дані</legend>
+            <form>
+                <label>
+                    <input type="text" id="n" placeholder="Кількість випробувань"><input  type="checkbox" id="switchForN" checked> <span>Ввести кількість випробувань</span></label><br>
+                 <label>
+                    <input type="text" id="p" placeholder="ввести імовірність"><span>Ввести імовірність успіху</span><br>
+                </label>
+                    <div class='or'>Або<span class="line">  -----------------------------------------------------------------------------------------------------------------------------</span></div>    
+                <label>
+                    <input type="text" id='l'><span>Введіть параметр <b><i>&lambda;</i></b></span><hr>
+                </label>
+                    <span>Що потрібно знайти?</span><br>
+                <label>
+                    <input id="probability" type="number"><input type="checkbox" id="prob"><span>Кількість успіхів буде рівна</span>
+                </label><br>
+                <label>
+                    <input id="interval" type="text"><input type="checkbox" id='checkIntervalProblem'>
+                    <span>Імовірність буде знаходитись в проміжку</span>
+                </label>
+                <br>
+                <label>
+                    <input type="number" id="atLeast" placeholder="введіть k"><input type="checkbox" id="checkAtLeast"><span>Відбудеться <label><input type="radio" name="type" value='atLeast'><span style='color: blue;'>хоча б</span></label><label><input type="radio" name='type'><span style='color:orange'>більше ніж</span></label> k успіхів</span>
+                </label><br>
+                <input type="button" value="Обчислити" onclick="calculate()">
+            </form>
+        </fieldset>
+        <hr>
+        <div id='solve'>
+            <h2>Розв'язок</h2>
+            <p class="none" id='calculL'>Обчислимо параметр <i><b>&lambda;=np</b></i></p>
+            <p class="none" id='parametr'> Математичне сподівання <b><i>M(X)=&lambda;  <span id="valueParam"></span></i></b>. Використаємо розподіл Пуассона</p>
+            <div id='expectedValue'></div>
+            <p class="none" description='kSuccess'>Обчислимо імовірність настання події k-разів</p>
+            <div id='probabilityOfSuccess' class='none'></div>
+            <p description='fromTo' class="none">Подія настане від <span id='from'></span> до   <span id='to'></span> разів</p>
+            <div id='intervalProblem'></div>
+            <p description='atLeast' class="none">
+                A -  відбулося <span atLeast='number' class="none"> хоча б </span><span class="none" moreThen='number'> більше ніж </span> <span attribute='last'></span> успіхів. Протилежною подією до наявної буде подія, що ми отримали <span atLeast='number' class="none"> менше ніж </span><span moreThen='number' class="none"> не більше </span><span attribute='last'></span> успіхів. Знайдемо цю імовірність, а потім, віднявши її від 1, знайдемо шукану імовірність</p>
+            <div id='writeLastProblem'></div>
+        </div>
+        <script src="js.js"></script>
+    </body>
+</html>

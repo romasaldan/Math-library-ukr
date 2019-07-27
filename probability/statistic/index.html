@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> <!-- for graf -->
+<!--        <script src="../graf.js"></script> alternative graf-->
+    </head>
+    <body>
+        <fieldset>
+            <form>
+                <input type="text" style="width: 200px"><span>Ввести вибірку</span><br>
+                <input type="button" value="опрацювати" onclick='start()'><hr>
+            </form> 
+            <br>
+            <p>Або ввести статистичний розподіл</p>
+
+<!--
+            <form>
+                <input type="text" style="width: 200px"><span>Ввести вибірку</span><br>
+                <input type="button" value="опрацювати" onclick='start()'><hr>
+            </form>    
+-->
+
+            <br>
+        </fieldset>
+        <div id='solve'>
+        </div>
+        <div id="polygon">
+            <div id="plottingPolygon"></div>
+        </div>
+        <div id="empire">
+            <div id="plottingEmpire"></div>
+        </div>    
+		<div id="gysto">
+		</div>
+<!--        <canvas id="myCanvas" width="578" height="300"></canvas>-->
+<!--        <canvas id="canvas" width="502" height="108"></canvas>-->
+        <script src="../../libraryMathDetails/universal.js"></script>
+        <script src='../../libraryMathDetails/statisticFunctions.js'></script>
+        <script src="js.js"></script>
+    </body>
+</html>

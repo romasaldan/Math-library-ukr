@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../statistic/trustIntervals/style.css">
+        <link rel="stylesheet" href="../../statistic/statisticalDistribution/style.css">
+<!--        <script src="../../probability/statistic.js"></script>-->
+		<script src="../../libraryMathDetails/fractionLibrary.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="../../libraryMathDetails/universal.js"></script>
+		<script src="../../libraryMathDetails/discreteDistributionLibrary.js"></script>
+<!--		<script src="../../probability/statistic/js.js"></script>-->
+<!--		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>  for graf 		-->
+		
+<!--		<script src='../trustIntervals/js.js'></script>-->
+    </head>
+    <body>
+        <form id="getData">
+            <div class='tasc'>
+				Ввести розмірність розподілу по горизонталі<input type='number' name="dimensionX" class="smallForm"><div class="clear"></div>
+				Ввести розмірність розподілу по вертикалі<input type='number' name="dimensionY"><div class="clear"></div>
+				<input type="button" value="Сформувати таблицю і задачі" onclick="createFormOfSendingData()">
+				<div id="table"></div>
+				<div class="none" id="listOfTasc">
+<!--
+					<label><input type="checkbox" name='comparative'>Сформувати розподіл відносних частот</label><div class="clear"></div>
+					<label><input type="checkbox" name="numberChar">Обчислити числові характеристики</label><div class="clear"></div>
+					<label>Ввести рівень значимості<input type="text" name="levelConfidence"></label><div class="clear"></div>
+					<label><input type="checkbox" name="trustAverageKD">Обчислити довірчий інтервал для матсподівання при відомій дисперсії<input type="text" name='deviation'></label><div class="clear"></div>
+					<label><input type="checkbox" name="trustAverageUKD">Обчислити довірчий інтервал для матсподівання при невідомому СКВ </label><div class="clear"></div>
+					<label><input type="checkbox" name="trustDisp">Обчислити довірчий інтервал для дисперсії і СКВ</label><div class="clear"></div>
+					<label><input type="checkbox" name="empireFunction">Емпірична функція розподілу</label><div class="clear"></div>		
+					<label><input type="checkbox" name="grafEmpireFunction">Графік емпіричної функції розподілу</label><div class="clear"></div>		
+					<label><input type="checkbox" name="grafRelativePolygon">Розподіл відносних частот</label><div class="clear"></div>		
+					<label><input type="checkbox" name='grafPolygon'>Розподіл частот</label><div class="clear"></div>
+					<label><input type="checkbox" name="toIntervalDistribution">Перейти до інтервального розподілу з </label><input type="number" name="numberInterval"> інтервалів<div class="clear"></div>
+-->
+					<label><input type="checkbox" name="covariation" checked>Обчислити коефіцієнт варіації</label><div class="clear"></div>
+					<label><input type="checkbox" name="corelation"  checked>Обчислити коефіцієнт кореляції</label><div class="clear"></div>
+					<p>Для умовних розподілів</p>
+					
+					
+				</div>
+            </div>
+			
+        </form>
+        <input type="button" value="розв'язати задачі" onclick="processData('#solver')">
+		<div id="solver">
+        
+        </div>
+		<script src='twoDimensional.js'></script>
+    </body>
+</html>    
