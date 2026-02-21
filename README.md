@@ -20,4 +20,4 @@ I developed this tool to automate my academic workload, including coursework and
 * **Localization:** Ukrainian.
 
 ---
-*This repository is kept public for historical purposes to showcase my early logic-driven projects and growth as an engineer. It is archived and no longer maintained.*
+### *This repository is kept public for historical purposes to showcase my early logic-driven projects and growth as an engineer. It is archived and no longer maintained.*
